@@ -5,7 +5,7 @@
         <key>geese.landed.ct</key>
         <dict>
             <key>NSStringLocalizedFormatKey</key>
-            <string>%1$d, %2$#@geese@ landed</string>
+            <string>%1$d: %2$#@geese@ landed on %3$#@fields@</string>
             <key>geese</key>
             <dict>
                 <key>NSStringFormatSpecTypeKey</key>
@@ -25,9 +25,9 @@
                 <key>NSStringFormatValueTypeKey</key>
                 <string>d</string>
                 <key>one</key>
-                <string>%2$d field</string>
+                <string>%3$d field</string>
                 <key>other</key>
-                <string>%2$d fields</string>
+                <string>%3$d fields</string>
             </dict>
         </dict>
     </dict>

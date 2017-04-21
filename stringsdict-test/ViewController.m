@@ -17,7 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    __test_label.text = [NSString stringWithFormat:NSLocalizedString(@"geese.landed.ct", nil), 1, 2];
+    __test_label.text = [NSString stringWithFormat:NSLocalizedString(@"geese.landed.ct", nil), 1, 2, 1];
 }
 
 
