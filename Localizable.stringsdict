@@ -2,10 +2,11 @@
 <!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
     <dict>
+        <!-- a bit contrived an example -->
         <key>geese.landed.ct</key>
         <dict>
             <key>NSStringLocalizedFormatKey</key>
-            <string>%1$d: %2$#@geese@ landed on %3$#@fields@</string>
+            <string>%#@geese@</string>
             <key>geese</key>
             <dict>
                 <key>NSStringFormatSpecTypeKey</key>
@@ -13,9 +14,9 @@
                 <key>NSStringFormatValueTypeKey</key>
                 <string>d</string>
                 <key>one</key>
-                <string>%2$d goose</string>
+                <string>%d-%d goose landed on %#@fields@</string>
                 <key>other</key>
-                <string>%2$d geese</string>
+                <string>%d-%d geese landedon %#@fields@</string>
             </dict>
             
             <key>fields</key>
@@ -25,9 +26,45 @@
                 <key>NSStringFormatValueTypeKey</key>
                 <string>d</string>
                 <key>one</key>
-                <string>%3$d field</string>
+                <string>%d field</string>
                 <key>other</key>
-                <string>%3$d fields</string>
+                <string>%d fields</string>
+            </dict>
+        </dict>
+        
+        <!-- this works -->
+        <key>you.answered.questions</key>
+        <dict>
+            <key>NSStringLocalizedFormatKey</key>
+            <string>You answered %ld ouf ot %#@questions@</string>
+            <key>questions</key>
+            <dict>
+                <key>NSStringFormatSpecTypeKey</key>
+                <string>NSStringPluralRuleType</string>
+                <key>NSStringFormatValueTypeKey</key>
+                <string>d</string>
+                <key>one</key>
+                <string>%d question</string>
+                <key>other</key>
+                <string>%d questions</string>
+            </dict>
+        </dict>
+
+        <!-- this doesn't -->
+        <key>you.stayed.nights</key>
+        <dict>
+            <key>NSStringLocalizedFormatKey</key>
+            <string>%#@nights@</string>
+            <key>nights</key>
+            <dict>
+                <key>NSStringFormatSpecTypeKey</key>
+                <string>NSStringPluralRuleType</string>
+                <key>NSStringFormatValueTypeKey</key>
+                <string>d</string>
+                <key>one</key>
+                <string>You stayed %ld out of %d night</string>
+                <key>other</key>
+                <string>You stayed %ld out of %	d nights</string>
             </dict>
         </dict>
     </dict>
